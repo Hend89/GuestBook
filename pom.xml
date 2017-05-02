@@ -3,10 +3,10 @@
 
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.elderstudios</groupId>
-    <artifactId>guestbook</artifactId>
+    <artifactId>SpringGuestList</artifactId>
     <packaging>jar</packaging>
     <version>1.0</version>
-    <name>A Guestbook example written in Spring framework</name>
+    <name>A GuestList - Spring framework</name>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -37,6 +37,7 @@
             <artifactId>spring-boot-starter-tomcat</artifactId>
             <scope>provided</scope>
         </dependency>
+
     </dependencies>
 
     <build>
@@ -53,6 +54,7 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
+
         </plugins>
     </build>
 </project>

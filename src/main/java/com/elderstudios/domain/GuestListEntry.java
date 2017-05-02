@@ -10,7 +10,7 @@ import java.util.Date;
 
 @Entity
 @EntityListeners(AuditingEntityListener.class)
-public class GuestBookEntry {
+public class GuestListEntry {
 
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
@@ -19,6 +19,9 @@ public class GuestBookEntry {
 
     @NotEmpty
     private String name;
+
+    @Column(name = "contact")
+    private Long contact;
 
     @NotEmpty
     private String comment;
@@ -45,6 +48,14 @@ public class GuestBookEntry {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public Long getContact() {
+        return contact;
+    }
+
+    public void setContact(Long contact) {
+        this.contact = contact;
     }
 
     public String getComment() {

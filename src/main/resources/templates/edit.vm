@@ -1,0 +1,27 @@
+<h2>Guest Details</h2>
+
+<form method="PUT" command="edit" action="/update?id=$edit.id">
+
+<table>
+<input type="hidden" name="id" value="$edit.id" >
+        <tr>
+            <td>  Name: </td>
+            <td> #springFormInput("edit.name") </td>
+            <td> #springBind("edit.name")#springShowErrors("<br/>", "text-danger") </td>
+        </tr>
+        <tr>
+            <td> Contact: </td>
+            <td> #springFormInput("edit.contact") </td>
+            <td> #springBind("edit.contact")#springShowErrors("<br/>", "text-danger") </td>
+        </tr>
+       <tr>
+            <td> Comment: </td>
+            <td> #springFormInput("edit.comment") </td>
+            <td> #springBind("edit.comment")#springShowErrors("<br/>", "text-danger") </td>
+       </tr>
+            <tr> <td> </td>
+            <td> <input type="submit"/> </td>
+            <td> <a href="/" >Cancel</a>  </td>
+       </tr>
+</table>
+</form>

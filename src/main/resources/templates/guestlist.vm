@@ -1,0 +1,63 @@
+
+<form method="POST" command="form">
+
+    <p>
+<table>
+        <tr>
+            <td>  Name: </td>
+            <td> #springFormInput("form.name") </td>
+            <td> #springBind("form.name")#springShowErrors("<br/>", "text-danger") </td>
+        </tr>
+        <tr>
+            <td> Contact: </td>
+            <td> #springFormInput("form.contact") </td>
+            <td> #springBind("form.contact")#springShowErrors("<br/>", "text-danger") </td>
+        </tr>
+       <tr>
+            <td> Comment: </td>
+            <td> #springFormInput("form.comment") </td>
+            <td> #springBind("form.comment")#springShowErrors("<br/>", "text-danger") </td>
+       </tr>
+            <tr> <td> </td>
+            <td> <input type="submit"/> </td>
+            <td> </td>
+       </tr>
+</table>
+    </p>
+
+</form>
+
+
+ <hr>
+
+<table>
+    <tr>
+        <th> Guest </th>
+        <th> Number </th>
+        <th> Comment </th>
+        <th> Added on </th>
+        <th>  </th>
+        <th> </th>
+    </tr>
+
+
+
+    <br>
+
+
+
+
+        #foreach ( $entry in $entries )
+    <tr>
+            <td> $entry.name </td>
+            <td> $entry.contact </td>
+            <td> $entry.comment </td>
+            <td> $entry.created </td>
+            <td> <td><a href="edit/$entry.id" >Edit</a></td> </td>
+            <td> <a href="delete/$entry.id" >Delete</a> </td>
+        #end
+    </tr>
+
+ </table>
+
+
